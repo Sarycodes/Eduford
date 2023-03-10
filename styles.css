@@ -1,0 +1,196 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+2. Remove default margin and padding
+*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+/*
+3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+/*
+Typographic tweaks!
+4. Add accessible line-height
+5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* General styling */
+.hero {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 07), rgba(4, 9, 30, 0.7)),
+    url(./images/banner.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2% 6%;
+  align-items: center;
+}
+
+nav img {
+  width: 150px;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.nav-links ul a {
+  text-decoration: none;
+  color: #ffff;
+  font-size: 0.8125em;
+}
+
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: #f44336;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+.text-box {
+  width: 90%;
+  color: #ffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.text-box h1 {
+  font-size: 3.875em;
+}
+
+.text-box p {
+  margin-top: 10px;
+  margin-bottom: 40px;
+  margin-left: 0;
+  margin-right: 0;
+  font-size: 0.875em;
+}
+
+.hero-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffff;
+  border: 1px solid white;
+  background-color: transparent;
+  padding: 12px 34px;
+  font-size: 13px;
+  cursor: pointer;
+  position: relative;
+}
+
+.hero-btn:hover {
+  background-color: #f44336;
+  border: 1px solid #f44336;
+  transition: 1s;
+}
+
+nav .bi {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .text-box h1 {
+    font-size: 1.25em;
+  }
+
+  .nav-links ul li {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 0;
+    right: -200px;
+    text-align: left;
+    background-color: #f44336;
+    height: 100vh;
+    width: 200px;
+    z-index: 2;
+    transition: 1s;
+  }
+
+  nav .bi {
+    display: block;
+    color: #ffff;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  .nav-links ul {
+    padding: 0 30px;
+  }
+}
