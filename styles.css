@@ -69,7 +69,7 @@ h6 {
 .hero {
   min-height: 100vh;
   width: 100%;
-  background-image: linear-gradient(rgba(4, 9, 30, 07), rgba(4, 9, 30, 0.7)),
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
     url(./images/banner.png);
   background-position: center;
   background-size: cover;
@@ -379,5 +379,29 @@ h3 {
   .testimonials-col img {
     margin-left: 0px;
     margin-right: 15px;
+  }
+}
+
+/* call to action */
+.cta {
+  width: 80%;
+  margin: 100px auto;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),url(images/banner2.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  padding: 100px 0;
+  border-radius: 10px;
+}
+
+.cta h1 {
+  color: #ffff;
+  margin-bottom: 40px;
+  padding: 0;
+}
+
+@media (max-width: 700px) {
+  .cta h1 {
+    font-size: 24px;
   }
 }
